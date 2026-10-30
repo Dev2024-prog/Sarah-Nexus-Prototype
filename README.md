@@ -1,55 +1,42 @@
-# Sarah Nexus
+# Sarah Nexus — Interactive AI Prototype
 
-**A smarter way to diagnose and recover your PC.**
+**Live demo:** https://sarah-nexus-prototype.kurudavid34.workers.dev
 
-Sarah Nexus is a PC diagnostics and recovery system currently in active development.
+A browser-based demonstration of Sarah Nexus, the conversational PC diagnostics and recovery planning assistant by **Koncepció Labor**.
 
-It is designed to run from a USB drive and help users understand what is wrong with their computer, identify likely causes, and guide them through safe recovery steps.
+## Try the prototype
 
-## What Sarah Nexus is built for
+Open the live demo (no account required). Select a scenario (black screen / no POST, Windows repair loop, USB device failures, or BIOS clock reset) or describe your own issue. Sarah will ask diagnostic questions, generate hypotheses, propose safe checks, and verify the results you report.
 
-- Windows startup and boot problems
-- Hardware and system diagnostics
-- Driver and compatibility issues
-- Storage and system health checks
-- Guided recovery and repair
-- Clear explanations instead of cryptic error messages
-- User approval before performing system-changing actions
+**Important:** This is a browser-based AI diagnostic *planning* experience. It does not read your computer hardware, execute repair commands, flash firmware, or perform a real hardware scan. Hardware test results are provided by the user, not fabricated by the AI.
 
-Sarah Nexus is not intended to blindly apply fixes.  
-The goal is to collect evidence, narrow down the problem, explain the findings, and only then offer appropriate actions.
+## Architecture
 
-## Current status
+- Frontend: responsive static HTML/CSS/JavaScript served by the Worker.
+- AI backend: Cloudflare Workers AI using `@cf/meta/llama-3.1-8b-instruct`.
+- Server-side AI binding: no API key exposed to the browser.
+- Agent workflow: collect symptoms → assess hypotheses → gather evidence → propose actions → verify.
+- Safeguards: restricted message sizes and history, read-only advisory behavior, no automatic repairs.
+- Degraded behavior: if Workers AI is unavailable or free inference allocation is exhausted, the UI shows an error; it does **not** fake an AI answer.
 
-🚧 **Prototype — Active Development**
+## Deployment
 
-Sarah Nexus is currently being developed and tested.
+This repo contains the source deployed as the Cloudflare Worker named `sarah-nexus-prototype`.
 
-The public repository contains the evolving prototype and parts of the diagnostic architecture. A stable public build is not available yet.
+1. Create a Cloudflare account (Workers Free is supported; Workers AI free daily inference allocation applies).
+2. Deploy with `npx wrangler deploy` after authorizing Wrangler; the `wrangler.json` file defines the Workers AI binding `AI`.
+3. Enable your Worker on its `workers.dev` subdomain.
+4. Check `/api/health` for `{"ai":true}`, then test `POST /api/chat` with `{"messages":[{"role":"user","content":"My PC doesn't POST"}]}`.
 
-## How it works
+The deployment was initiated from the Cloudflare API on 2026-10-30. The external URL and model response should be smoke-tested from a browser before submission.
 
-Sarah Nexus is being designed around a simple workflow:
+## Notes for judges
 
-**Diagnose → Explain → Repair → Verify**
+- No login, payment, or API key required.
+- Internet connection required for the AI.
+- Free quota and platform rate limits may restrict usage.
+- No actual computer modifications are performed.
 
-The system gathers information about the computer, analyzes the available evidence, and presents the most likely causes in a conversational interface.
+Project: https://koncepciolabor.com
 
-When a supported repair is available, Sarah asks for permission before making changes.
-
-## USB-based recovery
-
-The first version of Sarah Nexus is designed to boot directly from a USB drive.
-
-This allows Nexus to inspect and assist with computers even when Windows cannot start normally.
-
-## Project
-
-Sarah Nexus is developed by **K-Lab / Koncepció Labor**.
-
-🌐 https://koncepciolabor.com
-
----
-
-Sarah Nexus is currently under active development.  
-Features, architecture and availability may change as the prototype evolves.
+Developed by K-Lab / Koncepció Labor.
