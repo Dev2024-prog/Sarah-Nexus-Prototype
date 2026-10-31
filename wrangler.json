@@ -1,9 +1,0 @@
-{
-  "name": "sarah-nexus-prototype",
-  "main": "src/index.js",
-  "compatibility_date": "2026-10-20",
-  "ai": {
-    "binding": "AI"
-  },
-  "workers_dev": true
-}
