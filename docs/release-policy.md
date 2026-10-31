@@ -1,26 +1,47 @@
-# Nexus Prototype release contract
-_Date: 2026-09-30. Initial routing policy; not a declaration that a build exists._
+# Sarah Nexus — Release & Quality Policy
 
-## Repository and product ownership
-- Product: **Sarah Nexus**; prototype channel owner: `Dev2024-prog/Sarah-Nexus-Prototype`.
-- Source/build identity and GitHub release assets must come from this repository (or a future explicitly reviewed repository migration).
-- Historical `Dev2024-prog/SarahLite-Releases` must not receive new artifacts.
-- Avoid `sarah-lite-*` tags, `lite/latest/*` delivery aliases and claims that old Lite binaries constitute Nexus.
-- Suggested prototype prerelease tag: `sarah-nexus-v0.1.0-prototype.1` once the corresponding new implementation and validated build actually exist. This is an example, **not an issued release**.
+**Updated: 31 October 2026**
 
-## Release gate (fail closed)
-- Require an exact source commit SHA and CI checks passing for that SHA.
-- Require working source, version metadata, independently built new artifacts and validation relevant to the artifact type.
-- For bootable media: run device/boot pipeline tests and verify firmware/early boot evidence handling before publication.
-- For mobile/Windows artifacts: validate application identity, permissions, connectivity/authentication and installation smoke tests.
-- Supply checksums and integrity verification for all downloadable assets and sign metadata when appropriate.
-- Never publish a placeholder, empty release or a renamed Lite build.
-- Keep separate storage/manifests; never overwrite current Lite R2 aliases or delete historical chunks.
-- Preserve audit trail with provenance, version, publication date and verification results.
-- Plan explicit entitlement migration, including legacy paid **Early Supporter** access, separately from build/distribution changes.
+## Our commitment to quality
 
-## Retention and compatibility
-Existing Sarah Lite versions remain a historical supported-installation concern. Maintain previous public URLs and historical signed R2 manifests for those users until a separate validated migration demonstrates continuity. Archiving a repository and deleting one are different operations; deletion is **not** authorized by this policy.
+Sarah Nexus is being developed as a portable computer diagnostics and assistance system. We want every published release to have a clear identity, documented capabilities, appropriate checks, and an honest account of its limitations.
 
-## Future implementation
-Add a real source-aware Nexus build workflow and publication credentials only once Nexus artifacts and CI gates exist. Do not grant a generic release job broad write permissions before that point.
+This policy describes the requirements for future releases; it does **not** announce a release or claim that the complete system is already validated.
+
+## How we verify releases
+
+Before making an official build available, we require evidence that:
+
+- The package comes from an identifiable source revision and has a clear version.
+- The downloaded files can be checked for integrity.
+- The included features have passed relevant tests.
+- Installation and startup have been assessed on the intended platforms.
+- Known limitations and the scope of testing are explained.
+
+Automated checks, emulator results, file-based tests and physical hardware tests are different kinds of evidence. We do not describe an emulator-only result as proof of a fully tested physical USB system.
+
+A release is withheld when its required verification has not been completed. We do not publish placeholders or rebrand historical Sarah Lite binaries as new Nexus builds.
+
+## Sarah Nexus and Sarah Universe
+
+**Sarah Nexus** is the diagnostic environment intended to run from compatible bootable media. **Sarah Universe** is the Windows companion application that prepares USB media and manages supported application updates.
+
+Their versions and verification records must be traceable. Updating the Windows Universe application does not automatically update an existing Nexus USB drive.
+
+## Relationship with Sarah Lite
+
+Sarah Lite is the earlier generation of the Sarah project. Existing Lite releases and user access are handled separately from the Nexus release process.
+
+We aim to preserve access to legitimate historical releases while treating any migration to Nexus as a separately verified change. No previous Lite package should be presented as a newly built Nexus prototype.
+
+## Current availability
+
+**As of 31 October 2026, this public repository does not contain an independently runnable Sarah Nexus prototype.** It contains project documentation and the criteria a future prototype must meet. Please see the [repository README](../README.md) for the current status.
+
+When a verified release becomes available, its version, supported functionality, installation instructions, integrity information and known limitations should be published alongside it.
+
+## Further information
+
+See [What Comes Next](what-comes-next.md) for the development roadmap.
+
+For more information about Sarah Nexus and Koncepció Labor, visit [koncepciolabor.com](https://koncepciolabor.com/).
