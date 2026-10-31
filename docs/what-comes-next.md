@@ -133,3 +133,5 @@ Reliable end-to-end boot, compatible hardware, display and input responsiveness,
 **Planned** describes a goal. **In development** means work exists but may not yet be integrated. **Validated** requires evidence from the relevant tests and devices. Milestones describe the intended development sequence, not guaranteed release dates.
 
 For the criteria that a future independently runnable prototype must satisfy, see [the prototype release policy](release-policy.md). More detailed implementation planning is maintained separately from this public roadmap.
+
+For more information about Sarah Nexus and Koncepció Labor, visit [koncepciolabor.com](https://koncepciolabor.com/).
