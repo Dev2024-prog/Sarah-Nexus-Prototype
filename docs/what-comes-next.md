@@ -5,6 +5,30 @@
 
 Sarah Nexus is being developed as a portable, AI-assisted computer diagnostics and controlled-repair environment. This roadmap describes our direction and the conditions we want to prove—not a promise that every feature is already available.
 
+### Before Nexus: the story of Sarah Lite
+
+Sarah Nexus is the next stage of a project with a history. Its predecessor, **Sarah Lite**, was created to make computer problems easier to investigate when ordinary troubleshooting was confusing, time-consuming, or unavailable from the installed operating system. The guiding idea was simple: give people a dedicated environment in which they could learn more about their machine and gather useful diagnostic information.
+
+Sarah Lite developed into a portable, USB-started diagnostics environment. Rather than depending entirely on a potentially damaged Windows installation, its separate environment could help users inspect a computer's hardware and operating-system condition. The project explored information about the processor, memory, storage devices, networking and connected peripherals, as well as basic diagnostic checks and reports. Its approach was based on recognizable tools and guided screens: users would choose a category or check, inspect the results, and decide what to do next.
+
+That foundation mattered. A portable diagnostic environment made it possible to approach problems from outside the system being investigated. It also established the importance of keeping observations and reports available for later review. However, Sarah Lite was not a universal repair solution. The usefulness of a test depended on the machine, the available hardware interfaces, and what the environment could safely observe. A report could support a diagnosis without proving that every component was healthy or that an identified symptom had a single cause.
+
+Over time, the project encountered a larger challenge: **collecting information and understanding what to do with it are different tasks**. Traditional diagnostic screens may expose useful facts, but users still have to connect symptoms, judge their relevance and choose the next step. Adding more tests or pages alone does not solve that problem. The next generation therefore needed a different way of guiding investigations, not simply a larger menu.
+
+### What changed with Sarah Nexus
+
+Nexus carries forward the purpose of Sarah Lite while changing the interaction model. Its direction is to combine targeted local diagnostic evidence with an **online AI agent** that can help organize a multi-step investigation, ask for the right information and explain the findings. A limited set of rule-based local checks is also part of the intended offline experience. This does not turn offline checks into an offline language model.
+
+The redesign also puts more emphasis on how conclusions are reached and how actions are controlled. Nexus plans to distinguish observed facts from suggestions, preserve relevant history, verify outcomes and require clear approval before sensitive changes. The unified **Nexus Guard** direction brings startup trust and runtime protection under a consistent security concept. The graphical experience is also being rethought for modern hardware, rather than simply carrying the earlier interface forward.
+
+**Sarah Nexus is an evolution, not a renamed copy of Sarah Lite.** Useful knowledge and selected capabilities from the earlier system inform the new one, but the architecture, agent interaction, security design and release validation must stand on their own.
+
+### Sarah Lite's place in the project today
+
+Sarah Lite is the earlier generation of the Sarah project. Its legacy release line is distinct from the new Nexus development and its public prototype channel. Existing Lite users and historical downloads are handled separately from any future Nexus prototype release; older software should never be relabeled as a new Nexus build.
+
+This history describes product goals and publicly understandable capabilities. It is intentionally **not a source-code guide, build recipe, boot-media specification or a complete description of Sarah Lite's internal components**. It also does not imply that every planned Nexus feature has already been completed or validated.
+
 ### Our direction
 
 1. **Hybrid intelligence:** an online AI agent helps investigate problems and coordinate permitted diagnostic tools. A limited set of rule-based local checks, device history and on-device evidence recording are planned to work without an internet connection. This does not mean the cloud AI model itself runs offline.
