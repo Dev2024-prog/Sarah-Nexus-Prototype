@@ -24,25 +24,27 @@ Sarah Nexus is being developed as a portable, AI-assisted computer diagnostics a
 
 ### The 17 workstreams
 
+These are planned directions, not completed or independently released features.
+
 | # | Workstream | Direction |
 |---:|---|---|
-| 1 | Preflight & Early Core | UEFI/UKI azonosság, verziózott átadás, boot ID korreláció |
-| 2 | Boot Recovery | Hibatörténet utólagos értelmezése; külön jóváhagyott helyreállítási folyamat |
-| 3 | Hardware Diagnostics | Célzott olvasó és aktív vizsgáló adapterek, egységes ToolRequest/Result/Evidence |
-| 4 | Machine Profile | Hardverazonosság, platformképesség, dokumentált vs tesztelt támogatás |
-| 5 | Black Box | Korai+runtime események, append-only sorrend, boot ID, rotáció, titkosítás, Blueprint |
-| 6 | Nexus AI Agent | Online modell + kéréshez kötött helyi eszköz; folytatható, ellenőrizhető esetsorozat |
-| 7 | Fault Knowledge | Forrásolt hibakártyák és ellenőrzött platformképességek |
-| 8 | Adaptive Repair | Javaslat, kockázat/mentés/rollback, pontos jóváhagyás, végrehajtás, visszamérés |
-| 9 | Guard Early Trust | Korai védelmi szabályok Preflight/Early Core végrehajtóiban |
-| 10 | Guard Runtime & Lockdown | Security Gates, eseménykorreláció, arányos Lockdown, elkülönített jogosultság |
-| 11 | Action Cards & Identity | Zöld/sárga/piros célzott műveleti engedély, független kiállítás, licenc és fiókhatárok |
-| 12 | Sarah Interface / Smooth Experience | Modern hardverre optimalizált Basic/Pro, gazdag animációk, magas frissítés, natív DPI |
-| 13 | Mobile Companion | Opcionális, párosított állapotlekérdezés, csak mérhető korai és runtime események |
-| 14 | Windows Integration | Windows megfigyelés, célzott adatgyűjtés, biztonságos helyi műveleti híd |
-| 15 | Sarah Universe | Telepítő, frissítő, image- és commitazonosság, USB ellenőrzés és rollback |
-| 16 | Cloud & Telemetry | AI szolgáltató, válaszlejátszás-védelem, opcionális R2 napló, költségkeret és consent |
-| 17 | Global Ecosystem | Többnyelvűség, támogatás, publikálható kiadási bizonyíték, márka- és megfelelőség |
+| 1 | Preflight & Early Core | Verified startup and evidence handoff |
+| 2 | Boot Recovery | Safe handling of boot failures and later approved recovery |
+| 3 | Hardware Diagnostics | Targeted hardware tests and evidence |
+| 4 | Machine Profile | Device profile and supported capability tracking |
+| 5 | Black Box | Secure local event history and audit trail |
+| 6 | Nexus AI Agent | Online AI-guided diagnosis using authorized tools |
+| 7 | Fault Knowledge | Reviewed, source-backed troubleshooting knowledge |
+| 8 | Adaptive Repair | Risk-aware, owner-approved repair and verification |
+| 9 | Guard Early Trust | Early-stage startup trust checks |
+| 10 | Guard Runtime & Lockdown | Runtime monitoring and proportionate protection |
+| 11 | Action Cards & Identity | Scoped permissions and identity controls |
+| 12 | Sarah Interface / Smooth Experience | High-refresh modern Basic and Pro visual experience |
+| 13 | Mobile Companion | Optional securely paired mobile experience |
+| 14 | Windows Integration | Optional Windows companion integration |
+| 15 | Sarah Universe | Trustworthy installer, updates and USB delivery |
+| 16 | Cloud & Telemetry | Reliable online agent and privacy-conscious diagnostics |
+| 17 | Global Ecosystem | Localization, product support and global readiness |
 
 ### Development milestones
 
