@@ -29,6 +29,20 @@ Sarah Lite is the earlier generation of the Sarah project. Its legacy release li
 
 This history describes product goals and publicly understandable capabilities. It is intentionally **not a source-code guide, build recipe, boot-media specification or a complete description of Sarah Lite's internal components**. It also does not imply that every planned Nexus feature has already been completed or validated.
 
+### Verified functionality snapshot — 31 October 2026
+
+This dated snapshot includes **only functionality supported by documented implementation or executed tests**. Results are deliberately tied to their test environments; they are not claims that a complete Nexus release is available.
+
+| Demonstrated capability | Verified scope |
+| --- | --- |
+| Basic graphical startup | Demonstrated in an emulator using software rendering |
+| A local CPU diagnostic check | Exercised in an emulated Basic environment |
+| Saving a diagnostic result | Exercised against the environment's own diagnostic storage in an emulator |
+| Universe package import and integrity checks | Tested using ordinary files |
+| USB writer readback/verification logic | Tested using ordinary files, **not** a physical USB drive |
+
+These test outcomes are recorded in the private product repository's Universe documentation. **They do not establish that a bootable public prototype has been released.** As this repository's own README states, it currently has no independently runnable prototype implementation. The snapshot records what was demonstrated in the wider Sarah Nexus project, not what can be installed from this public repository.
+
 ### Our direction
 
 1. **Hybrid intelligence:** an online AI agent helps investigate problems and coordinate permitted diagnostic tools. A limited set of rule-based local checks, device history and on-device evidence recording are planned to work without an internet connection. This does not mean the cloud AI model itself runs offline.
