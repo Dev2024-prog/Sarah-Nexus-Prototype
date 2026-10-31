@@ -66,10 +66,32 @@ These are planned directions, not completed or independently released features.
 - **Measure the UI.** Fluid animations, pointer responsiveness, display scaling and stability must be checked on actual devices before making performance guarantees.
 - **Respect privacy.** Diagnostic data and optional cloud services require explicit scope and appropriate protections.
 
-### How to read status
+### Where Sarah Nexus stands today
 
-**Planned** = a design goal. **In development** = work exists but may not be integrated. **Validated** = demonstrated against defined tests and hardware. These terms should accompany future updates. A date or milestone name alone is not a release commitment.
+Sarah Nexus has an established private development codebase, documented startup and security architecture, local diagnostic foundations, and ongoing work on its AI agent and graphical interface. Some changes are still in development branches; successful individual tests do not mean the complete USB system has passed physical end-to-end validation.
 
-This public roadmap complements a **private technical implementation plan** maintained with the main Sarah Nexus source. Detailed implementation boundaries, sensitive security material and internal operational information are not published here. See the repository's existing release policy for what a real prototype release must demonstrate.
+The public **Sarah-Nexus-Prototype** repository currently contains project documentation and release requirements, **not an independently runnable prototype package**. Its README explicitly records that limitation. This roadmap must not be mistaken for a download or installation release.
 
-**Planning reference:** What Comes Next / CRE-111. This file is documentation, not a product release, binary, installation guide or certification.
+### How Sarah Universe fits in
+
+**Sarah Universe** is the Windows companion application used to prepare a bootable Nexus USB and manage supported Windows application updates. **Sarah Nexus** is the separate diagnostic environment intended to start from that USB.
+
+The previously documented Universe Basic package describes the following preparation flow:
+
+1. Obtain the complete, verified Windows package from an authorized release source and extract it on a compatible Windows PC.
+2. Start Sarah Universe and choose its USB creation workflow.
+3. Let the application verify and prepare the packaged system image.
+4. Carefully identify the target USB drive and confirm the erase warning. Creating the drive removes its previous contents.
+5. Write and verify the USB image, then boot a target PC from USB and test Nexus separately.
+
+These are **documented steps for a historical Basic packaging workflow**, not proof that a current downloadable public prototype or a fully validated image is available here. An application update is also different from updating an existing bootable USB.
+
+### What still needs verification
+
+Reliable end-to-end boot, compatible hardware, display and input responsiveness, USB networking, real online agent responses and controlled repair procedures require release-specific checks. The full validated installation guide will accompany a release that passes those checks, rather than being inferred from this roadmap.
+
+### Understanding progress
+
+**Planned** describes a goal. **In development** means work exists but may not yet be integrated. **Validated** requires evidence from the relevant tests and devices. Milestones describe the intended development sequence, not guaranteed release dates.
+
+For the criteria that a future independently runnable prototype must satisfy, see [the prototype release policy](release-policy.md). More detailed implementation planning is maintained separately from this public roadmap.
