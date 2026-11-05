@@ -36,7 +36,7 @@ We aim to preserve access to legitimate historical releases while treating any m
 
 ## Current availability
 
-**As of 31 October 2026, this public repository does not contain an independently runnable Sarah Nexus prototype.** It contains project documentation and the criteria a future prototype must meet. Please see the [repository README](../README.md) for the current status.
+The repository publishes a small runnable Nebius diagnostic prototype as source. See the [repository README](../README.md) for its scope and test status. A verified bootable package requires the release checks above.
 
 When a verified release becomes available, its version, supported functionality, installation instructions, integrity information and known limitations should be published alongside it.
 
