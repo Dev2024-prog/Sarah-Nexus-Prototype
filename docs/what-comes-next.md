@@ -41,7 +41,7 @@ This dated snapshot includes **only functionality supported by documented implem
 | Universe package import and integrity checks | Tested using ordinary files |
 | USB writer readback/verification logic | Tested using ordinary files, **not** a physical USB drive |
 
-These test outcomes are recorded in the private product repository's Universe documentation. **They do not establish that a bootable public prototype has been released.** As this repository's own README states, it currently has no independently runnable prototype implementation. The snapshot records what was demonstrated in the wider Sarah Nexus project, not what can be installed from this public repository.
+These test outcomes are recorded in the private product repository's Universe documentation. **They do not establish that a bootable public prototype has been released.** The snapshot describes the wider Sarah Nexus project. The [public Nebius prototype](../README.md) separately demonstrates a small CPU and memory workflow from the command line.
 
 ### Our direction
 
@@ -108,7 +108,7 @@ These are planned directions, not completed or independently released features.
 
 Sarah Nexus has an established private development codebase, documented startup and security architecture, local diagnostic foundations, and ongoing work on its AI agent and graphical interface. Some changes are still in development branches; successful individual tests do not mean the complete USB system has passed physical end-to-end validation.
 
-The public **Sarah-Nexus-Prototype** repository currently contains project documentation and release requirements, **not an independently runnable prototype package**. Its README explicitly records that limitation. This roadmap must not be mistaken for a download or installation release.
+The public **Sarah-Nexus-Prototype** repository contains the local Nebius diagnostic prototype source, project documentation and release requirements. The README documents the tested scope. A validated bootable USB release is still pending.
 
 ### How Sarah Universe fits in
 
